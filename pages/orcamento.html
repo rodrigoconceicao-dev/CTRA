@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Orçamento | CTRA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../styles/styleOrcamento.css">
+</head>
+
+<body>
+
+    <div id="sucesso-alerta" class="alerta-sucesso">
+        <i class="fas fa-check-circle"></i>
+        <p><strong>Sucesso!</strong> A sua solicitação de orçamento foi enviada com sucesso. A CTRA entrará em contacto
+            brevemente.</p>
+    </div>
+
+    <section class="form-orcamento-section">
+        <div class="orcamento-container">
+
+            <div class="header-form">
+                <span class="subtitulo">FALE CONNOSCO</span>
+                <h1>Solicitar Orçamento de Serviços</h1>
+                <p>Use este formulário para um orçamento detalhado. A nossa equipa irá analisar o seu pedido e encontrar
+                    a solução mais eficiente para a gestão dos seus resíduos.</p>
+            </div>
+
+            <div class="form-grid">
+
+                <div class="info-contacto-wrapper">
+                    <h3>Informações de Contacto</h3>
+                    <p class="descricao-info">Comprometidos em encontrar a melhor solução para as suas necessidades de
+                        triagem e reciclagem.</p>
+
+                    <div class="item-contacto">
+                        <i class="fas fa-phone-alt icon-verde"></i>
+                        <div>
+                            <p class="label">Telefone</p>
+                            <p class="valor">+351 91 000 0000</p>
+                        </div>
+                    </div>
+
+                    <div class="item-contacto">
+                        <i class="fas fa-envelope icon-verde"></i>
+                        <div>
+                            <p class="label">Email</p>
+                            <p class="valor">CentrodeTriagemeReciclagemdeAlcochete@ctra.pt</p>
+                        </div>
+                    </div>
+
+                    <div class="item-contacto">
+                        <i class="fas fa-clock icon-verde"></i>
+                        <div>
+                            <p class="label">Horário de Funcionamento</p>
+                            <p class="valor">Segunda a Sexta: 7h às 18h | Sábado: 7h às 12h</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-wrapper">
+                    <form id="orcamentoForm">
+
+                        <input type="text" name="nome" placeholder="Nome Completo" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="tel" name="telefone" placeholder="Telefone" required>
+
+                        <select name="servico" required>
+                            <option value="" disabled selected>Tipo de Serviço que Solicita *</option>
+                            <option value="triagem-reciclagem">Triagem e Reciclagem de RCD</option>
+                            <option value="rececao-entulho">Recepção de Entulhos e Resíduos</option>
+                            <option value="fornecimento-agregados">Fornecimento de Agregados Reciclados</option>
+                            <option value="aluguer-contentores">Aluguer e Colocação de Contentores</option>
+                            <option value="transporte-residuos">Serviço de Transporte de Resíduos</option>
+                            <option value="outro">Outro Tipo de Serviço</option>
+                        </select>
+
+                        <textarea name="mensagem"
+                            placeholder="Descreva as suas necessidades, o tipo e volume de resíduos..."
+                            rows="5"></textarea>
+
+                        <button type="submit" class="btn-enviar-orcamento">
+                            <i class="fas fa-paper-plane"></i> Enviar Pedido de Orçamento
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script src="../js/pedirOrcamento.js"></script>
+</body>
+
+</html>

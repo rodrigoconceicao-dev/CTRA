@@ -1,0 +1,219 @@
+:root {
+    --fundo-escuro: #1b1b1b;
+    --campo-fundo: #2a2a2a;
+    --texto-claro: #f4f4f4;
+    --verde-principal: #6aa84f;
+    --verde-escuro-texto: #38761d;
+    --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --radius-grande: 12px;
+    --radius-pequeno: 6px;
+}
+
+body {
+    background-color: var(--fundo-escuro);
+    color: var(--texto-claro);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.form-orcamento-section {
+    padding: 100px 20px;
+}
+
+.orcamento-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-form {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.header-form .subtitulo {
+    color: var(--verde-escuro-texto);
+    font-size: 0.9em;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.header-form h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin: 10px 0 15px;
+}
+
+.header-form p {
+    color: #b0b0b0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.info-contacto-wrapper {
+    padding: 30px;
+    background-color: var(--campo-fundo);
+    border-radius: var(--radius-grande);
+    box-shadow: var(--sombra-suave);
+}
+
+.info-contacto-wrapper h3 {
+    color: var(--verde-principal);
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.info-contacto-wrapper .descricao-info {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.item-contacto {
+    display: flex;
+    padding: 15px 0;
+    border-top: 1px solid #3a3a3a;
+    align-items: center;
+}
+
+.item-contacto:first-child {
+    border-top: none;
+}
+
+.item-contacto .icon-verde {
+    color: var(--verde-principal);
+    font-size: 1.6em;
+    margin-right: 20px;
+    min-width: 25px;
+}
+
+.item-contacto .label {
+    margin: 0;
+    font-weight: 600;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.item-contacto .valor {
+    margin: 0;
+    font-size: 1em;
+}
+
+.form-wrapper input,
+.form-wrapper select,
+.form-wrapper textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid transparent;
+    border-radius: var(--radius-pequeno);
+    background-color: var(--campo-fundo);
+    color: var(--texto-claro);
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.form-wrapper input:focus,
+.form-wrapper select:focus,
+.form-wrapper textarea:focus {
+    outline: none;
+    border-color: var(--verde-principal);
+    box-shadow: 0 0 0 4px rgba(106, 168, 79, 0.2);
+}
+
+.form-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23b0b0b0" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 35px;
+}
+
+.form-wrapper textarea {
+    resize: vertical;
+}
+
+.btn-enviar-orcamento {
+    background-color: var(--verde-principal);
+    color: var(--texto-claro);
+    padding: 18px 25px;
+    border: none;
+    border-radius: var(--radius-pequeno);
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-enviar-orcamento:hover {
+    background-color: #5b9041;
+    transform: translateY(-2px);
+}
+
+.btn-enviar-orcamento i {
+    margin-right: 10px;
+}
+
+.alerta-sucesso {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--verde-principal);
+    color: var(--texto-claro);
+    padding: 25px 35px;
+    border-radius: var(--radius-grande);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    max-width: 400px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.alerta-sucesso.visivel {
+    opacity: 1;
+    visibility: visible;
+}
+
+.alerta-sucesso i {
+    font-size: 2.5em;
+    color: var(--texto-claro);
+    margin-bottom: 10px;
+}
+
+.alerta-sucesso p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.alerta-sucesso strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+
+@media (max-width: 900px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .alerta-sucesso {
+        max-width: 90%;
+    }
+}
